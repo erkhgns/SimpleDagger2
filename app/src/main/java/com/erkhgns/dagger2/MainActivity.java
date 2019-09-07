@@ -4,19 +4,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import dagger.internal.DaggerCollections;
 
 public class MainActivity extends AppCompatActivity {
-
+TextView textView;
+Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Body body = createBody();
+        btn = findViewById(R.id.button);
+        textView = findViewById(R.id.text);
 
-        Log.e("blood type: ", body.getBlood().getKindOfBlood());
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Body body = createBody();
+                textView.setText(body.getBlood().getKindOfBlood());
+            }
+        });
+
+
+
+        //Log.e("blood type: ", body.getBlood().getKindOfBlood());
 
     }
 

@@ -1,6 +1,7 @@
 package com.erkhgns.dagger2;
 
-import android.util.Log;
+import com.erkhgns.dagger2.BloodType.A_Blood;
+import com.erkhgns.dagger2.BloodType.B_Blood;
 
 import java.util.Random;
 
@@ -25,7 +26,6 @@ public class RandomInjectionModule {
         Random rnd = new Random();
         int rndNumber =rnd.nextInt(2);
 
-        Log.e("rnd", String.valueOf(rndNumber)  );
         switch (rndNumber){
             case 0:
                 blood = new A_Blood();

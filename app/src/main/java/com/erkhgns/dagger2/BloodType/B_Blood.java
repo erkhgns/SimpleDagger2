@@ -1,4 +1,6 @@
-package com.erkhgns.dagger2;
+package com.erkhgns.dagger2.BloodType;
+
+import com.erkhgns.dagger2.Blood;
 
 public class B_Blood extends Blood {
 

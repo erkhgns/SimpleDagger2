@@ -6,6 +6,8 @@ public class Body {
 
     @Inject
     Blood blood;
+
+
     @Inject
     public Body(){}
 
